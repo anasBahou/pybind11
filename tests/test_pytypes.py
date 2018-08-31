@@ -245,3 +245,8 @@ def test_number_protocol():
         l = [a == b, a != b, a < b, a <= b, a > b, a >= b, a + b,
              a - b, a * b, a / b, a | b, a & b, a ^ b, a >> b, a << b]
         assert m.test_number_protocol(a, b) == l
+
+
+def test_list_slicing():
+    l = list(range(100))
+    assert l[::2] == m.test_list_slicing(l)
